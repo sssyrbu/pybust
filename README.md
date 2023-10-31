@@ -21,7 +21,7 @@ source venv/bin/activate
 ```
 Устанавливаем зависимости проекта
 ```
-pip install > requirements.txt
+pip install -r requirements.txt
 ```
 #### Запуск скрипта
 Для запуска скрипта нам понадобиться перейти в директорию pybuster
