@@ -29,7 +29,7 @@ pip install > requirements.txt
 cd pybuster
 python3 pybuster.py <endpoints_file> <https://website_link> -o <output_file>
 ```
-Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. Файл должен быть в директории **pybuster**, 
+Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. Файл должен быть в директории **pybuster**. Пример такого файла: https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/common.txt
 <output_file> - название файла с результатом, который будет создан.
 
 #### Видео с примером работы (нажать на картинку)
