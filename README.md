@@ -32,5 +32,5 @@ python3 pybuster.py <endpoints_file> <https://website_link> -o <output_file>
 Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. Файл должен быть в директории **pybuster**, 
 <output_file> - название файла с результатом, который будет создан.
 
-#### Видео с примером работы
+#### Видео с примером работы (нажать на картинку)
 [![Смотреть](https://img.youtube.com/vi/whWOUq_M4zI/default.jpg)](https://www.youtube.com/watch?v=whWOUq_M4zI)
