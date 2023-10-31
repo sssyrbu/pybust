@@ -33,4 +33,4 @@ python3 pybuster.py <endpoints_file> <https://website_link> -o <output_file>
 <output_file> - название файла с результатом, который будет создан.
 
 #### Видео с примером работы
-coming....
+https://www.youtube.com/watch?v=whWOUq_M4zI
