@@ -1,12 +1,16 @@
 import asyncio
+from colorama import Fore
+from colorama import init
 from tools.exceptions import BadConnectionError, CantWriteFile
 from tools.buster import Buster
 from tools.arguments import parse_args
 from tools.loader import Loader
+from tools.welcome import SNAKE, NAME, print_welcome_msg
 from tools.write_to_file import write_file
 
 
 async def main():
+    print_welcome_msg(art=SNAKE, name=NAME)
     user_args = parse_args()
     endpoints_file = user_args.path
     website_url = user_args.link
@@ -17,7 +21,7 @@ async def main():
     ).start()
     buster = Buster()
     urls_info = []
-    partitions = [endpoints_list[i : i + 10] for i in range(0, len(endpoints_list), 10)]
+    partitions = [endpoints_list[i: i + 10] for i in range(0, len(endpoints_list), 10)]
     for partition in partitions:
         try:
             urls_info += await buster.get_codes(website_url, partition)
@@ -38,4 +42,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    init(autoreset=True)  # enables colorama for all platforms
     asyncio.run(main())
