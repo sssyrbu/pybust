@@ -8,7 +8,7 @@
 #### Установка: гайд для чайников
 Клонируем репозиторий 
 ```
-git clone git@github.com:sssyrbu/pybust.git
+git clone https://github.com/sssyrbu/pybust
 ```
 Переходим в директорию проекта и инициализируем виртуальное окружение
 ```
@@ -29,8 +29,8 @@ pip install -r requirements.txt
 cd pybuster
 python3 pybuster.py <endpoints_file> <https://website_link> -o <output_file>
 ```
-Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. Файл должен быть в директории **pybuster**. Пример такого файла: https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/common.txt
+Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. В директории wordlists есть готовый текстовый файл common.txt (в дальнейшем wordlists будет дополняться). Но также можно использовать и свой файл.
 <output_file> - название файла с результатом, который будет создан.
 
-#### Видео с примером работы (нажать на картинку)
+#### Видео с примером работы
 [![Смотреть](https://img.youtube.com/vi/whWOUq_M4zI/default.jpg)](https://www.youtube.com/watch?v=whWOUq_M4zI)
