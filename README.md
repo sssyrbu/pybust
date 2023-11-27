@@ -30,6 +30,7 @@ cd pybuster
 python3 pybuster.py <endpoints_file> <https://website_link> -o <output_file>
 ```
 Где <endpoints_file> - файл со списком эндпоинтов (директорий) для проверки. В директории wordlists есть готовый текстовый файл common.txt (в дальнейшем wordlists будет дополняться). Но также можно использовать и свой файл.
+
 <output_file> - название файла с результатом, который будет создан.
 
 #### Видео с примером работы
