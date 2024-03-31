@@ -5,7 +5,7 @@
 #### Для работы скрипта потребуются: Python версии 3.11 (на 3.12 пока работать не будет из-за несовместимости модуля aiohttp с Python 3.12), git, python3-venv, python3-pip
 #### Поддерживаемые ОС: GNU/Linux
 
-#### Установка
+## Установка
 Клонируем репозиторий 
 ```
 git clone https://github.com/sssyrbu/pybust
@@ -23,7 +23,7 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-#### Запуск скрипта
+## Запуск скрипта
 Для запуска скрипта нам понадобиться перейти в директорию pybuster
 ```
 cd pybuster
