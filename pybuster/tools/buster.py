@@ -1,29 +1,24 @@
-import aiohttp
 import asyncio
+import httpx
+
 from .custom_types import UrlInfo
 from .exceptions import BadConnectionError
-from typing import List
 
 
 class Buster:
     def __init__(self):
-        self.session = aiohttp.ClientSession()
+        self.session = httpx.AsyncClient()
 
-    async def get_code(self, url) -> UrlInfo:
-        try:
-            async with self.session.get(url) as response:
-                return UrlInfo(url, response.status)
-        except Exception:
-            raise BadConnectionError
+    async def get_code(self, url: str) -> UrlInfo:
+        # try:
+        response = await self.session.get(url)
+        if response.status_code != 301:
+            print(response, url)
+        return UrlInfo(url=url, code=response.status_code)
+        # except Exception:
+        #     raise BadConnectionError
 
-    async def get_codes(self, base_url: str, endpoints: List[str]) -> List[UrlInfo]:
-        tasks = []
-        for endpoint in endpoints:
-            url = (
-                base_url + endpoint
-                if base_url.endswith("/")
-                else base_url + "/" + endpoint
-            )
-            tasks.append(self.get_code(url))
+    async def get_codes(self, base_url: str, endpoints: list[str]) -> list[UrlInfo]:
+        tasks = [self.get_code(base_url + endpoint if base_url.endswith("/") else base_url + "/" + endpoint) for endpoint in endpoints]
         urls_and_codes = await asyncio.gather(*tasks)
         return urls_and_codes

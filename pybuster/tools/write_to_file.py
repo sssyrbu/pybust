@@ -1,6 +1,5 @@
 from .custom_types import UrlInfo
 from .exceptions import CantWriteFile
-from pathlib import Path
 
 
 def write_file(output_file: str, url_info: UrlInfo) -> None:
